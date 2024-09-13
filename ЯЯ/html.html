@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Checkbox</title>
+    <style>
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            width: 30px;
+            height: 30px;
+            background-color: #ddd;
+            border-radius: 5px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            background-color: #4CAF50;
+            border-radius: 3px;
+            transform: scale(0) translate(-50%, -50%);
+            transition: transform 0.3s;
+        }
+
+        input[type="checkbox"]:checked + label {
+            background-color: #4CAF50;
+        }
+
+        input[type="checkbox"]:checked + label::after {
+            transform: scale(1) translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox"></label>
+    </div>
+</body>
+</html>

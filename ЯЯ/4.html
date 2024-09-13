@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover and Focus Effect</title>
+    <style>
+        .nav-item {
+            padding: 10px 20px;
+            margin: 10px;
+            display: inline-block;
+            background-color: #ddd;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item:focus {
+            transform: scale(1.1);
+            background-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="nav-item" tabindex="0">Item 1</a>
+    <a href="#" class="nav-item" tabindex="0">Item 2</a>
+    <a href="#" class="nav-item" tabindex="0">Item 3</a>
+</body>
+</html>
